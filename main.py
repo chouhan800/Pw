@@ -57,7 +57,7 @@ OWNER_ID = 8050673236 # Replace with the actual owner's user ID
 # List of sudo users (initially empty or pre-populated)
 SUDO_USERS = [8050673236]
 
-AUTH_CHANNEL = -1003065018870
+AUTH_CHANNEL = -1002999415254
 
 # Function to check if a user is authorized
 def is_authorized(user_id: int) -> bool:
@@ -111,9 +111,9 @@ keyboard = InlineKeyboardMarkup(
                 [
                     InlineKeyboardButton("🇮🇳ʙᴏᴛ ᴍᴀᴅᴇ ʙʏ🇮🇳" ,tg://openmessage?user_id=8050673236") ],
                     [
-                    InlineKeyboardButton("🔔ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ🔔" ,url="https://t.me/TxtToVideoUpdateChannel") ],
+                    InlineKeyboardButton("🔔ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ🔔" ,url="tg://openmessage?user_id=8050673236") ],
                     [
-                    InlineKeyboardButton("🦋ғᴏʟʟᴏᴡ ᴜs🦋" ,url="https://t.me/TxtToVideoUpdateChannel")                              
+                    InlineKeyboardButton("🦋ғᴏʟʟᴏᴡ ᴜs🦋" ,tg://openmessage?user_id=8050673236")                              
                 ],           
             ]
       )
@@ -438,7 +438,7 @@ async def upload(bot: Client, m: Message):
     video_count = 0
     
     try:    
-        with open(x, "r") as f:
+        with open(x, "r") as f: to
             content = f.read()
         content = content.split("\n")
         
